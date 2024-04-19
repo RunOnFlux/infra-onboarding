@@ -8,7 +8,7 @@ PUBKEY=$(curl -s https://raw.githubusercontent.com/RunOnFlux/infra-onboarding/ma
 
 useradd -m --system --shell /bin/bash --groups sudo $USER
 
-echo "$USER ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/$USER
+echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER
 
 mkdir /home/$USER/.ssh
 
