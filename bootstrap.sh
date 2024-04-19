@@ -1,6 +1,9 @@
 #!/bin/bash
 
-[[ $(id -u) -eq 0 ]] || exec sudo /bin/bash -c "$(printf '%q ' "$BASH_SOURCE" "$@")"
+if [[ "$(id -u)" -ne 0 ]]; then
+  echo 'This script must be run as root'
+  exit 1
+fi
 
 USER=ansible
 
