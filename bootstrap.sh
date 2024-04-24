@@ -15,7 +15,7 @@ whiptail --title "Flux Infrastructure Onboarding" \
 "Production" "This server is a prod server." 3>&2 2>&1 1>&3
 )
 
-if [ $? -gt 0 ]; # Cancel pressed
+if [ $? -gt 0 ]; then # Cancel pressed
     exit
 fi
 
